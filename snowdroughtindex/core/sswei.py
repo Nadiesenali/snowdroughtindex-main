@@ -227,20 +227,24 @@ def classify_drought(swei: float) -> str:
     """
     if swei <= -2.0:
         return "Exceptional Drought"
-    elif -2.0 < swei <= -1.5:
+    elif -2.0 < swei <= -1.6:
         return "Extreme Drought"
-    elif -1.5 < swei <= -1.0:
+    elif -1.6 < swei <= -1.3:
         return "Severe Drought"
-    elif -1.0 < swei <= -0.5:
+    elif -1.3 < swei <= -0.8:
         return "Moderate Drought"
+    elif -0.8 < swei <= -0.5:
+        return "Abnormally Dry"
     elif -0.5 < swei <= 0.5:
         return "Near Normal"
-    elif 0.5 < swei <= 1.0:
+    elif 0.5 < swei <= 0.8:
         return "Abnormally Wet"
-    elif 1.0 < swei <= 1.5:
+    elif 0.8 < swei <= 1.3:
         return "Moderately Wet"
-    elif 1.5 < swei <= 2.0:
-        return "Very Wet"
+    elif 1.3 < swei <= 1.6:
+        return "Severely Wet"
+    elif 1.6 < swei <= 2.0:
+        return "Extremely Wet"
     else:
         return "Extremely Wet"
 
